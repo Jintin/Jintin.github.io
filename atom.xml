@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://Jintin.github.io/blog/"/>
-  <updated>2016-03-01T14:19:19.000Z</updated>
+  <updated>2016-03-20T03:42:04.000Z</updated>
   <id>https://Jintin.github.io/blog/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人機大戰</title>
+    <link href="https://Jintin.github.io/blog/2016/03/15/alphago/"/>
+    <id>https://Jintin.github.io/blog/2016/03/15/alphago/</id>
+    <published>2016-03-15T12:50:42.000Z</published>
+    <updated>2016-03-20T03:42:04.000Z</updated>
+    
+    <content type="html">&lt;p&gt;AlphaGo跟李世石的五番棋最終以4:1結束了，讓人讚嘆演算法的力量。&lt;/p&gt;&lt;h2 id=&quot;AlphaGo原理&quot;&gt;&lt;a href=&quot;#AlphaGo原理&quot; class=&quot;headerlink&quot; title=&quot;AlphaGo原理&quot;&gt;&lt;/a&gt;AlphaGo原理&lt;/h2&gt;&lt;p&gt;圍棋本身沒有太多規則，就是一連串的黑白輪流下子，困難的是對每一次落子有太多選擇，而棋局又有太多個回合，所以讓棋局的變化太多，要參透這門技術幾乎是不可能。&lt;/p&gt;&lt;p&gt;既然這麼麻煩那我們要怎麼讓電腦下圍棋呢，可以從現實生活尋找靈感，人類社會做決策有二種方式，一種是由該領域專家決定，另一種是多數表決。&lt;/p&gt;&lt;p&gt;教電腦也有這二種方式，一是把高手下棋的思維轉成電腦的邏輯寫成程式，電腦依據程式的規則來決定怎麼下，缺點是寫出的程式策略決定了棋力的高低，而複雜的事物就伴隨著複雜的規則。&lt;/p&gt;&lt;p&gt;另一種方式是讓電腦透過大量的資料自己歸納出如何下棋，人的思考有幾種特性，人在做一件不懂的事的時候會依據完成的結果來回饋自己，如果正確的話下次就會有更高的機率做一樣的決策，而失敗的決策就比較不會再度發生，不斷的循環就會減少犯錯的可能。我們可以把棋局分成很多層簡單的小策略，透過一連串的策略選擇讓電腦學習怎樣是對的怎樣是錯的。只要有夠多的資料電腦就可以慢慢學會如何做這些決策，也就學會了如何下圍棋。&lt;/p&gt;&lt;p&gt;AlphaGo就是依據大量的資料來學習的，有以下三個模組組成：&lt;/p&gt;&lt;h3 id=&quot;1-SL-Policy-Network&quot;&gt;&lt;a href=&quot;#1-SL-Policy-Network&quot; class=&quot;headerlink&quot; title=&quot;1. SL Policy Network&quot;&gt;&lt;/a&gt;1. SL Policy Network&lt;/h3&gt;&lt;p&gt;用KGS的3000萬盤棋譜作為深度學習的資料，學習人類在棋局中如何走下一步，在模擬棋局的時候，可以有效的減少搜尋的廣度，不需考慮不必要下子的地方。&lt;/p&gt;&lt;h3 id=&quot;2-RL-Policy-Network&quot;&gt;&lt;a href=&quot;#2-RL-Policy-Network&quot; class=&quot;headerlink&quot; title=&quot;2. RL Policy Network&quot;&gt;&lt;/a&gt;2. RL Policy Network&lt;/h3&gt;&lt;p&gt;以SL為基礎加強，自己跟自己對局1億次，藉由更多的資料不斷進行參數調整優化預測更好的下一步。&lt;/p&gt;&lt;h3 id=&quot;3-Value-Network&quot;&gt;&lt;a href=&quot;#3-Value-Network&quot; class=&quot;headerlink&quot; title=&quot;3. Value Network&quot;&gt;&lt;/a&gt;3. Value Network&lt;/h3&gt;&lt;p&gt;給定任何盤面，分析黑白雙方的勝率，在模擬棋局的時候，可以有效減少搜尋的深度，當某點變化勝率太低就不需考慮以這點進行的變化。&lt;/p&gt;&lt;p&gt;綜合三個模組，就可以得到一個很像人下圍棋的電腦，知道要該下哪裡、也會算變化分析勝率，當勝率太低還會投子啊。&lt;/p&gt;&lt;h2 id=&quot;人腦-vs-電腦&quot;&gt;&lt;a href=&quot;#人腦-vs-電腦&quot; class=&quot;headerlink&quot; title=&quot;人腦 vs 電腦&quot;&gt;&lt;/a&gt;人腦 vs 電腦&lt;/h2&gt;&lt;p&gt;雖然說電腦透過深度學習最後還是打敗人類，但二者間還是有本質上的不同。&lt;/p&gt;&lt;p&gt;人類在下棋的時候，會有脈絡思路，可以感覺出對方是好戰或是保守，會感到壓力、疲勞、失誤，計算能力也有限。這都是人的缺點，但人類強的是思考、學習的能力，人類不需要看幾千萬盤棋才懂圍棋，這點可說是完勝電腦。&lt;/p&gt;&lt;p&gt;而電腦是用資料在下圍棋，當他決定下A點的時候只因為A點的勝率比其他點高，但並沒有其他原因。而且，雖然說AlphaGo是一種人工智慧，但本質上只是大數據的統計分析，跟一般網站推薦系統也沒有太多不一樣，離真正的人工智慧還很遙遠。&lt;/p&gt;&lt;p&gt;圍棋比賽除了作為一門競技，也是一門藝術。進退之間追求平衡，這部分恐怕只有人腦能懂了。最後，李世石的敗戰感言也很感人啊，這大概是人跟電腦最大的不同吧。&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;雖然AlphaGo打敗了我一個李世石，但並不能說，就是打敗了整個人類。&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=&quot;未來&quot;&gt;&lt;a href=&quot;#未來&quot; class=&quot;headerlink&quot; title=&quot;未來&quot;&gt;&lt;/a&gt;未來&lt;/h2&gt;&lt;p&gt;就算這次李世石並沒有被打敗，但理論上只要給電腦更多資料，總有一天還是可以贏人類的，這一天總會到來、快或慢而已。那接下來呢，圍棋會因此滅亡嗎，還是會開拓一片新的領域呢？相信藉由電腦的輔助人類可以看到圍棋更多的可能性，而電腦也需要更多人類下的棋譜才能進步。&lt;/p&gt;&lt;p&gt;而作為一個通用的人工智慧系統，圍棋上的應用應該不是終點，各行各業都有機會引入，讀大學的時候很常聽到的一句話是”十年後80%工作會消失，而十年後需要的工作現在還沒出現。”，變革的時代，代表的是挑戰、也是機會，如果可以很平順的轉換到新科技的世界，人類可以把更多的時間拿去思考、解決更重要的問題。&lt;/p&gt;&lt;p&gt;最後，如果哪天電腦開竅了會寫程式，會有工程師想跟他比寫程式嗎？&lt;/p&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;AlphaGo跟李世石的五番棋最終以4:1結束了，讓人讚嘆演算法的力量。&lt;/p&gt;&lt;h2 id=&quot;AlphaGo原理&quot;&gt;&lt;a href=&quot;#AlphaGo原理&quot; class=&quot;headerlink&quot; title=&quot;AlphaGo原理&quot;&gt;&lt;/a&gt;AlphaGo原理&lt;/h2&gt;&lt;p
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>每月一語</title>
