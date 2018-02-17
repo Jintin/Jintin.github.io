@@ -1,0 +1,2 @@
+# Jintin.github.io
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7555902c532941b4994cb60a3448170b)](https://app.codacy.com/app/Jintin/Jintin.github.io?utm_source=github.com&utm_medium=referral&utm_content=Jintin/Jintin.github.io&utm_campaign=badger)
