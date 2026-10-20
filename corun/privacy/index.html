@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Co-Run Privacy Policy</title>
+  <style>
+    body { margin: 0; padding: 32px 20px 64px; font: 16px/1.6 -apple-system, "Helvetica Neue", "PingFang TC", "Noto Sans TC", sans-serif; color: #1d1d1f; background: #fff; }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { font-size: 28px; margin: 0 0 4px; }
+    h2 { font-size: 20px; margin: 36px 0 8px; }
+    p, li { margin: 8px 0; }
+    .meta { color: #6e6e73; margin-bottom: 24px; }
+    .lang { border-top: 1px solid #e5e5ea; margin-top: 48px; padding-top: 8px; }
+    code { font-size: 14px; background: #f5f5f7; padding: 1px 4px; border-radius: 3px; }
+    nav a { margin-right: 16px; }
+  </style>
+</head>
+<body>
+<main>
+  <nav><a href="#en">English</a><a href="#zh">中文</a></nav>
+
+  <section id="en">
+    <h1>Co-Run Privacy Policy</h1>
+    <p class="meta">Effective 20 October 2026 · Applies to the Android app <code>com.jintin.corun</code>, published by Jintin.</p>
+
+    <p><strong>In short:</strong> Co-Run runs on your phone. It has no servers and no user accounts, shows no ads, and contains no analytics or tracking. Your training data stays on your device, except in two cases you start yourself: syncing from your own Garmin Connect account, and, if you choose to enable it, the AI coach note.</p>
+
+    <h2>1. What the app stores on your phone</h2>
+    <ul>
+      <li>Your running activities downloaded from Garmin Connect: each run's per-second time, distance, heart-rate, cadence and speed series (no GPS coordinates), plus a summary derived from them (distance, duration, pace, heart-rate distribution, best-effort curve).</li>
+      <li>Daily wellness figures from Garmin Connect: sleep duration and score, resting heart rate and HRV status.</li>
+      <li>Your race goals and training plan.</li>
+      <li>Weather forecasts used to decide whether tonight's run should change.</li>
+    </ul>
+    <p>All of this is kept in the app's private storage. It is excluded from Android backups. It is deleted when you clear the app's data or uninstall the app.</p>
+
+    <h2>2. Garmin Connect</h2>
+    <p>Sign-in happens on Garmin's own web page shown inside the app. Your Garmin password is typed into Garmin's page and never reaches Co-Run. Garmin returns access tokens, which the app stores in encrypted storage backed by the Android Keystore and uses only to download your activities and wellness data from Garmin's API. The sign-in page's cookies are cleared as soon as sign-in completes. Disconnecting Garmin in the app, clearing the app's data, or uninstalling removes the tokens. Garmin's handling of your account is governed by <a href="https://www.garmin.com/privacy/">Garmin's privacy policy</a>.</p>
+
+    <h2>3. Health Connect</h2>
+    <p>Co-Run asks Health Connect for <em>read-only</em> access to these record types: exercise sessions, heart rate, speed, distance, sleep, resting heart rate, heart-rate variability and steps.</p>
+    <ul>
+      <li>This data is used only for the app's own fitness features. Today, it powers the "Health Connect check" screen, which shows you which of these records your watch actually shares with Health Connect.</li>
+      <li>It is read and processed on your phone only. It is never uploaded, never shared with any third party, never sold, never used for advertising, and never used to train AI models.</li>
+      <li>The app never writes to Health Connect.</li>
+      <li>You can revoke access at any time in Health Connect settings. Revoking it does not affect the rest of the app.</li>
+    </ul>
+
+    <h2>4. AI coach note (optional)</h2>
+    <p>The training plan, paces and tonight's decision are computed on your phone by fixed rules and never depend on an AI model. If you enter your <em>own</em> API key for Anthropic, OpenAI or Google in the app's settings, Co-Run will additionally send a short training summary to that provider so it can write a few sentences explaining the day's decision. The summary contains the date, your fitness (VDOT) and training-load figures, tonight's prescribed workout and the reason it was or was not adjusted, readiness and weather notes, your race date and goal, and recent plan adherence. It does <strong>not</strong> contain your name, email, location, raw GPS tracks, raw heart-rate samples or any Health Connect data.</p>
+    <p>That provider processes the request under its own privacy policy (<a href="https://www.anthropic.com/privacy">Anthropic</a>, <a href="https://openai.com/privacy">OpenAI</a>, <a href="https://policies.google.com/privacy">Google</a>). Your API key is stored encrypted on your phone and is sent only to the provider you chose. Removing the key stops this entirely.</p>
+
+    <h2>5. Weather and air quality</h2>
+    <p>Forecasts are requested from Open-Meteo for a fixed location in Taipei. The app does not use or send your device's location. The Android app does not currently fetch air-quality data. If a future version does, it will use Taiwan's Ministry of Environment open data with a key you supply, and this policy will be updated first.</p>
+
+    <h2>6. What the app does not do</h2>
+    <ul>
+      <li>No advertising, no analytics SDK, no crash reporting, no tracking identifiers.</li>
+      <li>No Co-Run account: there is nothing to sign up for and nothing stored about you on any server operated by the developer.</li>
+      <li>No selling or sharing of your data.</li>
+    </ul>
+
+    <h2>7. Children</h2>
+    <p>Co-Run is a training tool intended for adults and is not directed at children.</p>
+
+    <h2>8. Changes and contact</h2>
+    <p>If this policy changes, the new version will be published at this address with a new effective date. Questions: <a href="mailto:jintinapps@gmail.com">jintinapps@gmail.com</a>.</p>
+  </section>
+
+  <section id="zh" class="lang" lang="zh-Hant">
+    <h1>Co-Run 隱私權政策</h1>
+    <p class="meta">自 2026 年 10 月 20 日起生效 · 適用於 Android 應用程式 <code>com.jintin.corun</code>，由 Jintin 發布。</p>
+
+    <p><strong>簡單說：</strong>Co-Run 在你的手機上運作。沒有伺服器、沒有帳號、沒有廣告，也沒有任何分析或追蹤工具。你的訓練資料留在你的裝置上，只有兩種情況例外，而且都由你自己啟動：從你自己的 Garmin Connect 帳號同步，以及你選擇開啟時的 AI 教練的話。</p>
+
+    <h2>1. App 在手機上儲存什麼</h2>
+    <ul>
+      <li>從 Garmin Connect 下載的跑步活動：每次跑步逐秒的時間、距離、心率、步頻與速度序列（不含 GPS 座標），以及由此算出的摘要（距離、時間、配速、心率分布、最佳努力曲線）。</li>
+      <li>Garmin Connect 的每日身體數據：睡眠時間與睡眠分數、靜止心率、HRV 狀態。</li>
+      <li>你的比賽目標與訓練計畫。</li>
+      <li>用來判斷今晚課表是否要調整的天氣預報。</li>
+    </ul>
+    <p>以上全部存在 app 的私有儲存空間，不納入 Android 備份。清除 app 資料或解除安裝即全部刪除。</p>
+
+    <h2>2. Garmin Connect</h2>
+    <p>登入是在 app 內顯示的 Garmin 官方網頁上完成。你的 Garmin 密碼輸入在 Garmin 的頁面，不會經過 Co-Run。Garmin 回傳存取權杖，app 將它存在由 Android Keystore 保護的加密儲存空間，只用來從 Garmin API 下載你的活動與身體數據。登入完成後登入頁的 cookie 立即清除。在 app 內中斷 Garmin 連線、清除 app 資料或解除安裝都會移除權杖。Garmin 對你帳號的處理依 <a href="https://www.garmin.com/zh-TW/privacy/">Garmin 隱私權政策</a>。</p>
+
+    <h2>3. Health Connect（健康連結）</h2>
+    <p>Co-Run 向 Health Connect 申請以下資料類型的<em>唯讀</em>權限：運動階段、心率、速度、距離、睡眠、靜止心率、心率變異、步數。</p>
+    <ul>
+      <li>這些資料只用於 app 本身的健身功能。目前用在「Health Connect 檢查」畫面，讓你看到手錶實際分享了哪些紀錄。</li>
+      <li>只在你的手機上讀取與處理，絕不上傳、不與任何第三方分享、不販售、不用於廣告、不用於訓練 AI 模型。</li>
+      <li>App 不會寫入任何資料到 Health Connect。</li>
+      <li>你隨時可以在 Health Connect 設定中撤銷權限，不影響 app 其他功能。</li>
+    </ul>
+
+    <h2>4. AI 教練的話（選用）</h2>
+    <p>訓練計畫、配速和今晚的決策都是手機上用固定規則算出來的，完全不依賴 AI 模型。如果你在設定中填入<em>自己的</em> Anthropic、OpenAI 或 Google API 金鑰，Co-Run 會另外把一段簡短的訓練摘要送到該服務商，請它用幾句話解釋當天的決策。摘要包含：日期、體能（VDOT）與訓練負荷數字、今晚的課表與是否調整及原因、準備度與天氣說明、比賽日期與目標、近期課表達成率。摘要<strong>不含</strong>你的姓名、email、位置、原始 GPS 軌跡、原始心率樣本，也不含任何 Health Connect 資料。</p>
+    <p>該服務商依其自身的隱私權政策處理請求（<a href="https://www.anthropic.com/privacy">Anthropic</a>、<a href="https://openai.com/privacy">OpenAI</a>、<a href="https://policies.google.com/privacy">Google</a>）。你的 API 金鑰加密存在手機上，只會送到你選的那家服務商。移除金鑰就完全停止。</p>
+
+    <h2>5. 天氣與空氣品質</h2>
+    <p>天氣預報向 Open-Meteo 取得，使用固定的台北座標；app 不使用也不傳送你裝置的位置。Android 版目前不會抓取空氣品質資料。未來若加入，會使用環境部開放資料並需要你自行提供金鑰，且會先更新本政策。</p>
+
+    <h2>6. App 不做的事</h2>
+    <ul>
+      <li>沒有廣告、沒有分析 SDK、沒有當機回報、沒有追蹤識別碼。</li>
+      <li>沒有 Co-Run 帳號：不需要註冊，開發者也沒有任何伺服器存放你的資料。</li>
+      <li>不販售、不分享你的資料。</li>
+    </ul>
+
+    <h2>7. 兒童</h2>
+    <p>Co-Run 是給成人使用的訓練工具，不以兒童為對象。</p>
+
+    <h2>8. 變更與聯絡</h2>
+    <p>政策若有修改，新版本會公布在此網址並更新生效日期。聯絡方式：<a href="mailto:jintinapps@gmail.com">jintinapps@gmail.com</a>。</p>
+  </section>
+</main>
+</body>
+</html>
